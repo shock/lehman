@@ -1,0 +1,5 @@
+#!/bin/bash
+datestamp=`date +%W%w%H%M`
+zipfile="/mnt/D/Studio/Scoring/lehman/notations_$datestamp.zip"
+echo "Creating $zipfile"
+zip $zipfile *.pdf
