@@ -24,11 +24,11 @@ def get_lily_files path
   lily_files
 end
 dirname = File.dirname(__FILE__)
-puts "Monitoring directory #{dirname}"
 
 if ARGV.size > 0
   dirname = ARGV.shift
 end
+puts "Monitoring directory #{dirname}"
 while true
   lily_files = get_lily_files( dirname )
   lily_files.each do |lily_name|
