@@ -13,13 +13,9 @@ chorus = \markup {
   }
 }
 
-headCross        = {
-\once \override NoteHead  #'stencil = #ly:text-interface::print
-\once \override NoteHead #'text = #(markup #:musicglyph "noteheads.s2cross") }
-
 headPlus        = {
 \once \override NoteHead  #'stencil = #ly:text-interface::print
-\once \override NoteHead #'text = #(markup #:musicglyph "scripts.stopped") }
+\once \override NoteHead #'text = #(markup #:musicglyph "noteheads.s2cross") }
 
 headCircle   = {
 \once \override NoteHead  #'stencil = #ly:text-interface::print
