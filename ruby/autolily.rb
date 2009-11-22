@@ -36,11 +36,10 @@ while true
     pdf_file = "#{dirname}/#{lily_name}.pdf"
     lily_cmd = "lilypond #{lily_file};touch #{pdf_file}"
     ly_time = File.open(lily_file).mtime
-    pdf_time = File.open(pdf_file).mtime
 #    puts "Checking #{lily_file}..."
 #    puts "ly_time: #{ly_time}"
 #    puts "pdf_time: #{pdf_time}"
-    if !File.exist?(pdf_file) || ly_time > pdf_time
+    if !File.exist?(pdf_file) || ly_time > File.open(pdf_file).mtime
       puts "Processing #{lily_file}"
       `#{lily_cmd}`
       puts "Finished.\n"
